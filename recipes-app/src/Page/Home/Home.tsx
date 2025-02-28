@@ -28,9 +28,6 @@ export function Home() {
     currentPage * itemsPerPage
   );
 
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-  };
   return (
     <div className={scss.container}>
       <h1>Recipes</h1>
@@ -50,7 +47,7 @@ export function Home() {
           current={currentPage}
           total={totalItems}
           pageSize={itemsPerPage}
-          onChange={handlePageChange}
+          onChange={(page) => setCurrentPage(page)}
           showSizeChanger
           onShowSizeChange={(_, pageSize) => setItemsPerPage(pageSize)}
           showTotal={(total) => `Total ${total} items`}
