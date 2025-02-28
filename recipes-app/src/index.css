@@ -24,8 +24,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -71,6 +69,7 @@ button:focus-visible {
 li {
   list-style-type: none;
   margin: 0;
+
 }
 
 a {
@@ -82,10 +81,13 @@ section {
   margin-bottom: 100px;
 }
 
-ul {
+.container{
   margin-left: 0;
   padding-left: 0;
-  width: 300px;
-  height: 300px;
-
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  align-content: space-between;
 }

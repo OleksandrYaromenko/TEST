@@ -1,4 +1,5 @@
 import { Meal } from '../../types.tsx';
+import scss from './RescioesList.module.scss';
 
 import { Recipe } from '../Recipe/Recipe.tsx';
 
@@ -7,9 +8,9 @@ interface RecipesListProps {
 }
 export function RescipesList({ recipes }: RecipesListProps) {
   return (
-    <ul>
+    <ul className={scss.container}>
       {recipes.map((meal: Meal) => (
-        <li key={meal.idMeal}>
+        <li key={meal.idMeal} className={scss.container_list}>
           <div>
             <Recipe
               key={meal.idMeal}
