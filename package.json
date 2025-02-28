@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@priver/prettier-config": "^1.0.0",
     "axios": "^1.8.1"
   }
 }
