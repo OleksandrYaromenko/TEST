@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@priver/prettier-config": "^1.0.0",
-    "axios": "^1.8.1",
-    "prettier": "^2.8.8"
-  }
-}
