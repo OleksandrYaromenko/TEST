@@ -20,11 +20,16 @@ export function Home() {
       <h1>Recipes</h1>
       <select onChange={(e) => setCategory(e.target.value)}>
         <option value="">Categories</option>
-        {[...new Set(data.map((meal: Meal) => meal.strCategory))].map((cat) => (
-          <option key={cat} value={cat}>
-            {cat}
-          </option>
-        ))}
+        <select onChange={(e) => setCategory(e.target.value)}>
+          <option value="">Categories</option>
+          {[...new Set(data.map((meal: Meal) => meal.strCategory))].map(
+            (cat) => (
+              <option key={cat as string} value={cat as string}>
+                {cat as string}
+              </option>
+            )
+          )}
+        </select>
       </select>
       <RescipesList recipes={filteredRecipes} />
     </div>
