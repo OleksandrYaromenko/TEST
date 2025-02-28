@@ -4,7 +4,7 @@ const API_URL = 'https://www.themealdb.com/api/json/v1/1';
 
 export const fetchRecipes = async () => {
   const response = await axios.get(`${API_URL}/search.php?s=`);
-  return response.data.meals;
+  return response.data?.meals || [];
 };
 
 export const fetchRecipeById = async (id: string) => {
